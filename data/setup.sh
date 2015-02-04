@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 apt-get install -y debconf-utils git
 
 debconf-set-selections <<< 'mysql-server mysql-server/root_password password phunconf'

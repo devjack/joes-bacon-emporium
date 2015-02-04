@@ -15,6 +15,7 @@ sed -i 's/__USER__/root/g' data/apache.conf
 sed -i 's/__PASS__/phunconf/g' data/apache.conf
 sed -i 's/__DB__/bacon/g' data/apache.conf
 a2dissite 000-default
+a2enmod rewrite
 cp data/apache.conf /etc/apache2/sites-available/001-bacon.conf
 a2ensite 001-bacon
 

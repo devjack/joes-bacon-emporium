@@ -25,7 +25,6 @@ $pageTemplate = PAGES_DIR.DS.$route.'.php';
 if( $route == '/') {
 	$pageTemplate = PAGES_DIR.DS.'index'.'.php';
 }
-
 if(!is_readable($pageTemplate)) {
 	$pageTemplate = PAGES_DIR.'/404.php';
 	http_response_code(404);

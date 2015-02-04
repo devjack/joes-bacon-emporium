@@ -6,16 +6,15 @@ if(!empty($_REQUEST)) {
     $sql = "SELECT * FROM users WHERE `user`='$user' and `password`=md5('$pass')";
     echo $sql;
     $query = $db->query($sql);
-    var_dump($query);
+
     if($query && $query->num_rows>0) {
         // user exists with that user and pass
-        $_SESSION['user'] = $query->fetch_assoc()['user'];
+        $_SESSION['user'] = $query->fetch_assoc()['id'];
         header('Location:'.$_REQUEST['destination']);
         exit; // let the header do its magic.
     } else {
         // user or pass mismatch
-        $error = "Login attempt failed.";
-        var_dump($db->error);
+        $message = "Login attempt failed.";
     }
 }
 
@@ -24,7 +23,7 @@ if(!empty($_REQUEST)) {
 
 <h1>Admin your baconz</h1>
 <form method="post" action="/login?destination=/">
-    <?=(isset($error) ? $error : "");?>
+    <?=(isset($message) ? $message : "");?>
     <p><input type="text" name="user" value="" placeholder="Username"></p>
     <p><input type="password" name="password" value="" placeholder="Password"></p>
     <p class="submit"><input type="submit" name="commit" value="Login"></p>

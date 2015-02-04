@@ -30,7 +30,18 @@ foreach($product as $field=>$value) {
         <span><?=$value;?></span>
     </p>
     <?php
-
 }
-
 ?>
+
+<form action="/cart" method="post">
+    <label for="quantty">Quantity:</label>
+    <input type="text" name="quantity" />
+    <input type="hidden" name="add" value="<?=$product['id'];?>" />
+    <input type="submit" name="product" value="Add to cart">
+</form>
+
+<br>
+<br>
+<br>
+<br>
+<!-- please don't judge me! -->

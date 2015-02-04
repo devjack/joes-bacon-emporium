@@ -35,18 +35,7 @@
             <?=$content;?>
         </div>
         <div id="leftpanel">
-            <div align="justify" class="graypanel">
-                <span class="smalltitle">Products</span><br /><br />
-                <span class="smallredtext">Rindless Shortcut Bacon 250g</span><br />
-                <span class="bodytext">Om nom nom nom</span><br />
-                <a href="/product.php/1" class="smallgraytext">More...</a><br /><br />
-                <span class="smallredtext">Middle Bacon 200g</span><br />
-                <span class="bodytext">Bacon all the yummy things!</span><br />
-                <a href="#" class="smallgraytext">More...</a><br /><br />
-                <span class="smallredtext">All the bacons</span><br />
-                <span class="bodytext">More bacon than you can possibly imagine!</span><br />
-                <a href="#" class="smallgraytext">More...</a><br /><br />
-            </div>
+            <?php require 'sidebar.php'; ?>
         </div>
         <div id="footer" class="smallgraytext">
             <a href="/">Home</a> | <a href="/about">About Us</a> | <a href="/products">Products</a> |  <a href="/">Contact Us</a>

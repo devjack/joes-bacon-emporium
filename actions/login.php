@@ -1,5 +1,5 @@
 <?php
-if(!empty($_REQUEST)) {
+if(!empty($_REQUEST) && array_key_exists('user', $_REQUEST)) {
     // we have a login attempt!
     $user = $_REQUEST['user'];
     $pass = $_REQUEST['password'];

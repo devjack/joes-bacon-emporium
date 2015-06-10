@@ -1,8 +1,15 @@
 <div align="justify" class="graypanel">
+    <?php
+    if(array_key_exists('user', $_SESSION )) {
+        echo "<h4> You are now logged in as user #{$_SESSION['user']}!</h4>";
+        echo "<a href='/login?logout=1&destination=/login'>logout?</a><br><br>";
+    }
+    ?>
+
     <span class="smalltitle">Products</span><br /><br />
 
 <?php
-$sidebarSql = "SELECT * from products order by id desc limit 3";
+$sidebarSql = "SELECT * from products order by id asc limit 3";
 $sidebarQuery = $db->query($sidebarSql);
 while($sidebarItem = $sidebarQuery->fetch_assoc()): ?>
 

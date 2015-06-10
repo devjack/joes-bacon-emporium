@@ -9,7 +9,7 @@
     <span class="smalltitle">Products</span><br /><br />
 
 <?php
-$sidebarSql = "SELECT * from products order by id desc limit 3";
+$sidebarSql = "SELECT * from products order by id asc limit 3";
 $sidebarQuery = $db->query($sidebarSql);
 while($sidebarItem = $sidebarQuery->fetch_assoc()): ?>
 

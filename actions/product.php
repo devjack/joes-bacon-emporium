@@ -11,7 +11,7 @@ $productId = $_GET['p'];
 $productSql = "SELECT * FROM products WHERE `id`='$productId'";
 $productQuery = $db->query($productSql);
 if(!$productQuery) {
-    echo "That product doesn't exist";
+    echo urldecode($_GET['p']) . ": That product doesn't exist";
     return;
 }
 

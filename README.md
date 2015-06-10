@@ -6,11 +6,15 @@ Author: Jack Skinner | @developerjack
 
 *********
 
+WARNING - NOT EVEN CHUCK NORRIS CAN SAVE YOU
+
 THIS CODE IS INTENTIONALLY INSECURE
+
+XSS, CSRF, SQL INJECTION + SESSION HIJACKING
 
 *********
 
-To run this code locally, launch PHP's build in server via
+To run this code locally, launch PHP's built in server via
 ```
 DB_HOST=<yourhost> DB_USER=<user> DB_PASS=<pass> DB_NAME=<db> php -S 0.0.0.0:8090 -t ./
 ```
@@ -18,6 +22,6 @@ DB_HOST=<yourhost> DB_USER=<user> DB_PASS=<pass> DB_NAME=<db> php -S 0.0.0.0:809
 
 You will need to create a database with the template code
 ```
-$ cat data/scaffold.sql > mysql
+$ mysql -u <user> -p < data/scaffold.sql
 ```
 Note: you may run mysql with additional parameters depending on your envonment.

@@ -1,4 +1,10 @@
 <div align="justify" class="graypanel">
+    <?php
+    if($_SESSION['user']) {
+        echo "<h4> You are now logged in!</h4>";
+    }
+    ?>
+
     <span class="smalltitle">Products</span><br /><br />
 
 <?php

@@ -4,7 +4,7 @@ if(!empty($_REQUEST) && array_key_exists('user', $_REQUEST)) {
     $user = $_REQUEST['user'];
     $pass = $_REQUEST['password'];
     $sql = "SELECT * FROM users WHERE `user`='$user' and `password`=md5('$pass')";
-    echo $sql;
+    if($_GET['reveal'] == 1) { echo $sql; }
     $query = $db->query($sql);
 
     if($query && $query->num_rows>0) {

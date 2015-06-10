@@ -1,7 +1,8 @@
 <div align="justify" class="graypanel">
     <?php
-    if($_SESSION['user']) {
-        echo "<h4> You are now logged in!</h4>";
+    if(array_key_exists('user', $_SESSION )) {
+        echo "<h4> You are now logged in as user #{$_SESSION['user']}!</h4>";
+        echo "<a href='/login?logout=1&destination=/login'>logout?</a><br><br>";
     }
     ?>
 
